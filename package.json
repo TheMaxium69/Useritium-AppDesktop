@@ -1,0 +1,14 @@
+{
+  "name": "useritium-appdesktop",
+  "version": "0.1.0",
+  "description": "App Electron, Application Desktop pour les compte Useritium",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Maxime Tournier",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^29.2.0"
+  }
+}

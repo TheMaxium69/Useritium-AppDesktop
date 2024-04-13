@@ -14,7 +14,9 @@ app.whenReady().then(() => {
         title: "Useritium App - " + VersionApp,
         width: 1318,
         height: 710,
-        resizable: false,
+        resizable: true,
+        minWidth:577,
+        minHeight:609,
         icon: path.join(__dirname, "/assets/logo.png"),
         webPreferences: {
             webSecurity: true,
@@ -61,6 +63,41 @@ app.whenReady().then(() => {
     });
 
 
+    setActivity('Connectée sur Useritium App', null);
+
 
 })
 
+
+// DISCORD
+const clientId = '1228757305558827100';
+const DiscordRPC = require('discord-rpc');
+const RPC = new DiscordRPC.Client({ transport: 'ipc' });
+
+DiscordRPC.register(clientId);
+
+async function setActivity(msg, pseudo){
+    if (!RPC) return;
+
+    RPC.setActivity({
+        details: msg,
+        startTimestamp: Date.now(),
+        largeImageKey: 'useritium',
+        largeImageText: 'Useritium App - ' + VersionApp,
+        smallImageKey: 'tyrolium',
+        smallImageText: 'Tyrolium',
+        instance: false,
+        buttons: [
+            {
+                label: 'Compte Useritium',
+                url: 'https://useritium.fr'
+            },
+            {
+                label: 'Tyrolium',
+                url: 'https://tyrolium.fr'
+            },
+        ]
+    })
+
+}
+RPC.login({ clientId }).catch(err => console.log(err))

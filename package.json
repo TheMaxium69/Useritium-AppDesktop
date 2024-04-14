@@ -1,6 +1,6 @@
 {
   "name": "useritium-appdesktop",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "App Electron, Application Desktop pour les compte Useritium",
   "main": "main.js",
   "scripts": {

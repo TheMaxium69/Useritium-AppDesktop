@@ -3,10 +3,10 @@ const path = require('path')
 
 
 let mainWindow;
-let VersionApp = "0.2.0"
-let UrlBases = "http://127.0.0.1/";
-let UrlConnection = "http://127.0.0.1/Useritium-WebSite/connect.php"
-let UrlPanel = "http://127.0.0.1/Useritium-WebSite/panel.php"
+let VersionApp = "0.3.0"
+let UrlBases = "http://useritium.fr/";
+let UrlConnection = "http://useritium.fr/connect.php"
+let UrlPanel = "http://useritium.fr/panel.php"
 app.whenReady().then(() => {
     // GESTION DE LA FENETRE
     mainWindow = new BrowserWindow({
